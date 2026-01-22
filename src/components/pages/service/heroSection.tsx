@@ -1,10 +1,14 @@
 import { Container } from "@/components/custom/container";
 import { Description } from "@/components/custom/description";
 import { Heading } from "@/components/custom/heading";
+import Navbar from "@/components/navigation/navbar";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-100 sm:min-h-150 h-full top-0 right-0 bg-[url(/service_hero_bg.jpg)] bg-cover xl:bg-contain bg-right bg-no-repeat place-content-center py-10">
+      <section className="absolute top-0 left-0 w-full z-20">
+        <Navbar />
+      </section>
       <div className="bg-linear-to-r max-lg:hidden from-white via-white to-transparent absolute inset-0 h-full"></div>
       <Container className="h-full relative z-10 flex flex-col place-content-start space-y-6 ">
         <Heading
