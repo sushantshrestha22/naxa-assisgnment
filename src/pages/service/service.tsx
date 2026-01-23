@@ -6,6 +6,7 @@ import type { RootState } from "../../store/store";
 import { setServices } from "../../features/serviceSlice";
 import ServiceSection from "@/components/pages/service/serviceSection";
 import { Container } from "@/components/custom/container";
+import ServiceSkeleton from "@/components/common/skeleton/service_skeleton";
 
 const ServicePage = () => {
   const serviceData = useSelector((state: RootState) => state.service.services);
@@ -26,9 +27,10 @@ const ServicePage = () => {
     refetch();
   }, []);
 
-  if (!data) {
-    return <div>No data found</div>;
+  if (isLoading || isFetching) {
+    return <ServiceSkeleton />;
   }
+
   return (
     <Container className="space-y-20 py-20">
       {serviceData.map((service, idx) => (

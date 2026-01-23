@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 const descriptionVariants = cva("text-foreground leading-relaxed ", {
   variants: {
     variant: {
-      default: "text-lg max-w-4xl text-foreground ",
-      caption: "text-foreground capitalize text-sm sm:text-base max-w-2xl",
-      small: "text-foreground text-base sm:text-lg max-w-3xl",
+      default: "text-sm xl:text-base max-w-4xl text-foreground ",
+      caption: "text-foreground capitalize text-sm xl:text-base max-w-2xl",
+      small: "text-foreground text-sm xl:text-base max-w-3xl",
     },
   },
   defaultVariants: {

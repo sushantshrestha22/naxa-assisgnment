@@ -14,7 +14,7 @@ const DangerousHtmlComponent: React.FC<DangerousHtmlProps> = ({
     <p
       dangerouslySetInnerHTML={{ __html: data || "" }}
       className={cn(
-        " mx-auto leading-20 text-foreground max-lg:text-center text-[.785rem] xl:text-base",
+        " mx-auto leading-20 text-foreground max-lg:text-center text-sm xl:text-base",
         className,
       )}
     />
@@ -22,3 +22,5 @@ const DangerousHtmlComponent: React.FC<DangerousHtmlProps> = ({
 };
 
 export default DangerousHtmlComponent;
+
+// text-[.785rem]
