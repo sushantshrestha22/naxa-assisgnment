@@ -3,7 +3,6 @@ import { API_URL } from "../constant/CONSTANT";
 import toast from "react-hot-toast";
 
 export const useAxios = () => {
-  // const { auth } = useAuth();
 
   const axiosInstance = axios.create({
     baseURL: API_URL,
