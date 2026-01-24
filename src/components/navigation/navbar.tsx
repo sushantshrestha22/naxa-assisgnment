@@ -2,8 +2,9 @@ import { Container } from "../custom/container";
 import NaxaLogo from "@/assets/images/naxa_logo.png";
 import { Button } from "../ui/button";
 import { IoMdArrowDropdown } from "react-icons/io";
+import Sidebar from "./sidebar";
 
-interface MenuItemProps {
+export interface MenuItemProps {
   name: string;
   link: string;
   dropdownItems?: MenuItemProps[];
@@ -86,9 +87,13 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <Button variant="ghost" size="lg">
+
+        <Button variant="ghost" size="lg" >
           Let's Talk
         </Button>
+        <section className="lg:hidden">
+          <Sidebar menuItems={menuItems} />
+        </section>
       </nav>
     </Container>
   );
